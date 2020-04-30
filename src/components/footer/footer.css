@@ -1,0 +1,27 @@
+.footer {
+  display: flex;
+  position: fixed;
+  width: 100%;
+  max-width: 680px;
+  bottom: 0;
+  height: 80px;
+}
+
+.footer__link {
+  display: flex;
+  flex: 0.5;
+  background-color: #e60014;
+  color: #fff;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.footer__link svg {
+  margin-bottom: 5px;
+}
+
+.rotate {
+  transform: rotate(90deg);
+}

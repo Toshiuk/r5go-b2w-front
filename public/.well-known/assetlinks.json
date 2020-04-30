@@ -1,0 +1,5 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target" : { "namespace": "android_app", "package_name": "com.pwascanit.app",
+               "sha256_cert_fingerprints": ["7C:D9:B5:B1:78:98:9F:65:1C:2A:E4:DE:25:B9:B2:69:1D:16:65:17:05:0A:A8:41:F0:69:22:32:B1:69:90:65"] }
+}]

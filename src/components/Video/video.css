@@ -1,0 +1,63 @@
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.video__container {
+  position: relative;
+  height: 50vh;
+  width: 100%;
+}
+
+.video {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.video video {
+  width: 100%;
+}
+
+.drawingBuffer {
+  max-width: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.video__page {
+  height: 100%;
+}
+
+.video__overlay {
+  position: absolute;
+  left: 50px;
+  top: 150px;
+  width: calc(100% - 100px);
+  height: calc(100% - 300px);
+  z-index: 9;
+  box-shadow: 0 0 0 99999px rgba(230, 0, 20, 0.3);
+}
+
+.video__explanation {
+  padding: 20px;
+  text-align: center;
+  font-size: 24px;
+  display: flex;
+}
+
+.skeleton__unsopported {
+  text-align: center;
+  height: 100%;
+}
+
+.skeleton__unsopported video {
+  display: none;
+}

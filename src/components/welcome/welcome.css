@@ -1,0 +1,72 @@
+.welcome {
+  height: 100%;
+  display: flex;
+  flex-flow: column;
+  text-align: center;
+  justify-content: center;
+  background-image: url("../../assets/images/smallheader.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.welcome__h2.welcome__h2.welcome__h2 {
+  color: #e60014;
+  font-weight: 900;
+  font-size: 48px;
+}
+
+.welcome__h3.welcome__h3.welcome__h3 {
+  font-weight: 900;
+  font-size: 24px;
+  color: #333333;
+}
+
+.welcome__p.welcome__p.welcome__p {
+  font-size: 16px;
+  color: #000000;
+}
+.welcome__a.welcome__a.welcome__a {
+  text-decoration-line: underline;
+  color: #ee0202;
+}
+
+.welcome__body {
+  padding: 20px 30px 40px;
+}
+
+.welcome__button {
+  background: linear-gradient(185.79deg, #f02f2f -10.04%, #b50000 81.09%);
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.16);
+  border-radius: 4px;
+  color: white;
+  display: flex;
+  height: 95px;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.welcome__button .welcome__button__icon {
+  flex: 0.2;
+  text-align: right;
+}
+
+.welcome__button .welcome__button__icon svg {
+  font-size: 40px;
+}
+
+.welcome__button .welcome__button__description {
+  text-align: left;
+  flex: 0.8;
+  padding-left: 20px;
+}
+
+.welcome__button .welcome__button__description .welcome__button__main {
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.welcome__button .welcome__button__description .welcome__button__secondary {
+  color: #ffffff;
+  font-size: 12px;
+}
