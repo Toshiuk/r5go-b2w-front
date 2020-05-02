@@ -10,7 +10,8 @@ const Welcome = () => {
   // eslint-disable-next-line no-unused-vars
 
   return (
-    <div className="welcome">
+    <div className="general-out-box">
+      <div className="welcome">
       <Typography className="welcome__h2" variant="h2">
         Bem-Vindo
       </Typography>
@@ -54,6 +55,7 @@ const Welcome = () => {
       <Link to="/">
         <p className="welcome__a">Entrar em outra conta?</p>
       </Link>
+    </div>
     </div>
   );
 };

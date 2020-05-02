@@ -21,56 +21,58 @@ const Login = () => {
   };
 
   return (
-    <div className="login">
-      <div className="login_logo">
-        <LogoIcon />
-      </div>
-      {enter ? (
-        <div className="login_loading">
-          <CircularProgress className="loading" disableShrink />
+    <div className="general-out-box out-box-bg-red fix-fill-window">
+      <div className="login">
+        <div className="login_logo">
+          <LogoIcon />
         </div>
-      ) : (
-        <div className="login_form">
-          <TextField
-            className="login_form_input"
-            placeholder="Usuário"
-            variant="outlined"
-            color="secondary"
-            InputProps={{
-              startAdornment: (
-                <InputAdornment position="start">
-                  <PersonIcon />
-                </InputAdornment>
-              )
-            }}
-          />
-          <TextField
-            className="login_form_input"
-            placeholder="Password"
-            variant="outlined"
-            color="secondary"
-            type="password"
-            InputProps={{
-              startAdornment: (
-                <InputAdornment position="start">
-                  <VpnKeyIcon />
-                </InputAdornment>
-              )
-            }}
-          />
-          <Button
-            className="login_form_button"
-            variant="contained"
-            onClick={onEnter}
-          >
-            {" "}
-            Acessar{" "}
-          </Button>
+        {enter ? (
+          <div className="login_loading">
+            <CircularProgress className="loading" disableShrink />
+          </div>
+        ) : (
+          <div className="login_form">
+            <TextField
+              className="login_form_input"
+              placeholder="Usuário"
+              variant="outlined"
+              color="secondary"
+              InputProps={{
+                startAdornment: (
+                  <InputAdornment position="start">
+                    <PersonIcon />
+                  </InputAdornment>
+                )
+              }}
+            />
+            <TextField
+              className="login_form_input"
+              placeholder="Password"
+              variant="outlined"
+              color="secondary"
+              type="password"
+              InputProps={{
+                startAdornment: (
+                  <InputAdornment position="start">
+                    <VpnKeyIcon />
+                  </InputAdornment>
+                )
+              }}
+            />
+            <Button
+              className="login_form_button"
+              variant="contained"
+              onClick={onEnter}
+            >
+              {" "}
+              Acessar{" "}
+            </Button>
+          </div>
+        )}
+        <div className="login_footer">
+          <p>Cadastrar</p>
+          <p>Esqueceu a senha?</p>
         </div>
-      )}
-      <div className="login_footer">
-        <p>Cadastrar</p>
-        <p>Esqueceu a senha?</p>
       </div>
     </div>
   );

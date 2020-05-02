@@ -5,16 +5,41 @@
   font-display: swap;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
 html,
 body,
 #root {
+  display: flex;
+  justify-content: center;
   height: 100%;
+  flex-grow: 1;
+  align-items: center;
 }
 
 body {
   font-family: "Roboto", Helvetica, sans-serif;
-  max-width: 680px;
   margin: 0 auto;
+}
+
+.out-box-bg-red {
+  background: linear-gradient(219.13deg, #f02f2f -10.04%, #b50000 81.09%);
+}
+
+.general-out-box {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  align-items: center;
+}
+
+.fix-fill-window {
+  flex-grow: 1;
 }
 
 p {
@@ -24,6 +49,8 @@ p {
 .main__wrapper {
   margin-bottom: 80px;
   height: calc(100% - 80px);
+  width: 100%;
+  max-width: 680px;
 }
 
 a {
