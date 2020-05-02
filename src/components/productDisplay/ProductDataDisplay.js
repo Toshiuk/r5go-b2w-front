@@ -14,11 +14,11 @@ const ProductDataDisplay = ({ product }) => {
   const zeroPad = (num, places) => String(num).padStart(places, "0");
   const history = useHistory();
   useEffect(() => {
-    HistoryHandler.addProduct(barcode, product);
+    HistoryHandler.addProduct(barcode, product, 0);
   }, []);
 
   const addProductQuantity = () => {
-    HistoryHandler.addProductQuantity(barcode, product, quantity);
+    HistoryHandler.addProduct(barcode, product, quantity);
     history.push(`/cart`);
   };
 
@@ -56,7 +56,7 @@ const ProductDataDisplay = ({ product }) => {
         {reactHtmlParser(product.body)}
       </div>
       <Button onClick={addProductQuantity} className="productDisplay__button">
-        Adicionar ao carrinho
+        ADICIONAR AO CARRINHO
       </Button>
     </div>
   );

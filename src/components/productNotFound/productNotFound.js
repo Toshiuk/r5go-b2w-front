@@ -12,13 +12,13 @@ const ProductNotFound = props => {
   return (
     <div className="productNotFound__container">
       <h2 className="productDisplay__title not-found">
-        Product not found{" "}
+        Produto não encontrado{" "}
         <span role="img" aria-label="crying emoji">
           😢
         </span>
       </h2>
-      <p>The barcode: {code} gave no results!</p>
-      <p>You can also enter the barcode below and try again:</p>
+      <p>O codigo de barras: {code} não deu resultado!</p>
+      <p>Tente entrar com o codigo de barras abaixo:</p>
       <BarcodeInputField />
     </div>
   );

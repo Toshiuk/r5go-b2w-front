@@ -1,14 +1,5 @@
 class HistoryHandler {
-  static addProduct(code, productData) {
-    if (this.getProduct(code) !== null) {
-      return;
-    }
-
-    localStorage.setItem(code, JSON.stringify(productData));
-    this.updateProducts(code);
-  }
-
-  static addProductQuantity(code, productData, quantity) {
+  static addProduct(code, productData, quantity = 0) {
     localStorage.setItem(code, JSON.stringify({ ...productData, quantity }));
     this.updateProducts(code);
   }
@@ -51,6 +42,12 @@ class HistoryHandler {
   static getCartProducts() {
     return (this.getProducts() || []).filter(
       product => !!product.data.quantity
+    );
+  }
+
+  static emptyQuantity() {
+    (this.getProducts() || []).map(product =>
+      this.addProduct(product.code, product.data, 0)
     );
   }
 }

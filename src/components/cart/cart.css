@@ -46,6 +46,10 @@
   text-align: left;
 }
 
+.cart__link {
+  color: #000;
+}
+
 .cart__name {
   font-size: 16px;
   font-weight: 600;
@@ -119,8 +123,47 @@
   line-height: 37px;
 }
 
-.cart__price__value {
+.cart__value {
   font-size: 14px;
   font-weight: 600;
   color: #e60014;
+}
+.cart__confirm__text.cart__confirm__text.cart__confirm__text {
+  color: #000;
+}
+
+.cart__paymentMethod {
+  margin: 15px 0;
+}
+
+.cart__changePaymentMethod.cart__changePaymentMethod.cart__changePaymentMethod {
+  font-size: 14px;
+  text-decoration-line: underline;
+  color: #e60014;
+}
+
+.cart__goHome.cart__goHome.cart__goHome {
+  font-size: 14px;
+  text-decoration-line: underline;
+  color: #e60014;
+  margin: 25px;
+}
+
+.cart__button.cart__button.cart__button {
+  height: 48px;
+  background: linear-gradient(184.41deg, #f02f2f -10.04%, #b50000 81.09%);
+  box-shadow: 0px 4px 4px rgba(238, 2, 2, 0.25);
+  border-radius: 4px;
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 14px;
+  margin: 27px;
+}
+
+.cart__confirm {
+  text-align: center;
+}
+
+.cart__button__disabled.cart__button__disabled.cart__button__disabled {
+  opacity: 0.4;
 }

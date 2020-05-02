@@ -112,3 +112,7 @@ a {
 img {
   width: 100%;
 }
+
+.divider.divider.divider {
+  margin: 20px 85px;
+}
