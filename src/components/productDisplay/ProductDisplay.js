@@ -15,7 +15,7 @@ const ProductDisplay = ({ match }) => {
     api
       .get(`/products/barcode/${match.params.id}`)
       .then(res => {
-        setProduct(res.data.data);
+        setProduct(res.data);
       })
       .catch(() => {
         history.push(`/product/not-found?code=${match.params.id}`);

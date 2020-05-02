@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import reactHtmlParser from "react-html-parser";
-import AddShoppingCartRoundedIcon from "@material-ui/icons/AddShoppingCartRounded";
 import PersonIcon from "@material-ui/icons/Person";
 import { Typography } from "@material-ui/core";
 import LocationOnIcon from "@material-ui/icons/LocationOn";
@@ -40,7 +39,7 @@ const HistoryDisplay = () => {
       <div className="history__list">
         <Typography className="history__title" variant="h3">
           {" "}
-          Seus scans recents{" "}
+          Seus scans recentes{" "}
         </Typography>
         {products === null ? (
           <div className="history__emptyState">
