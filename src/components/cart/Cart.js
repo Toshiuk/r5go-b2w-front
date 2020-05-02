@@ -34,12 +34,16 @@ const Cart = () => {
     products
       .reduce(
         (acc, product) =>
-          acc + parseInt(product.data.price, 2) * product.data.quantity,
+          acc +
+          parseFloat(product.data.price.replace(",", "."), 2) *
+            product.data.quantity,
         0
       )
       .toFixed(2)
       .toString()
       .replace(".", ",");
+
+  console.log(products);
 
   const zeroPad = (num, places) => String(num).padStart(places, "0");
   return (
@@ -85,7 +89,9 @@ const Cart = () => {
                 <div className="cart__textWrapper">
                   <Link className="cart__link" to={`/product/${barcode}`}>
                     <h2 className="cart__name">{title}</h2>
-                    <div className="cart__body">{reactHtmlParser(body)}</div>
+                    <div className="cart__body">
+                      <p>{reactHtmlParser(body)}</p>
+                    </div>
                     <div className="cart__price cart__body">
                       Por: <span className="cart__value">R${price}</span>
                     </div>

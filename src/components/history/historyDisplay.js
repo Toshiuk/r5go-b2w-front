@@ -68,7 +68,9 @@ const HistoryDisplay = () => {
                   </div>
                   <div className="history__textWrapper">
                     <h2 className="history__name">{title}</h2>
-                    <div className="history__body">{reactHtmlParser(body)}</div>
+                    <div className="history__body">
+                      <p>{reactHtmlParser(body)}</p>
+                    </div>
                     <div className="history__price history__body">
                       Por:{" "}
                       <span className="history__price__value">R${price}</span>
