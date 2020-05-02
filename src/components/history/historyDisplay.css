@@ -70,7 +70,7 @@ span.history__profile__icon {
   box-shadow: 1px 1px 6px 0px #666666;
 }
 
-.history__listItem+.history__listItem {
+.history__listItem + .history__listItem {
   border-top: solid 1px #ddd;
 }
 
@@ -88,8 +88,9 @@ span.history__profile__icon {
 }
 
 .history__textWrapper {
-  flex: 0.6;
+  flex: 0.8;
   padding-left: 10px;
+  color: #000;
 }
 
 .history__name {
@@ -99,11 +100,6 @@ span.history__profile__icon {
 
 .history__body {
   font-size: 14px;
-}
-
-.history__linkWrapper {
-  flex: 0.2;
-  color: #333;
 }
 
 .history__cart {

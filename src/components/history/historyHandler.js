@@ -8,6 +8,11 @@ class HistoryHandler {
     this.updateProducts(code);
   }
 
+  static addProductQuantity(code, productData, quantity) {
+    localStorage.setItem(code, JSON.stringify({ ...productData, quantity }));
+    this.updateProducts(code);
+  }
+
   static updateProducts(productToAdd) {
     if (this.getProductsId() === null) {
       localStorage.setItem("products", productToAdd);
@@ -41,6 +46,12 @@ class HistoryHandler {
     return this.getProductsId()
       .split(",")
       .map(x => ({ code: x, data: JSON.parse(this.getProduct(x)) }));
+  }
+
+  static getCartProducts() {
+    return (this.getProducts() || []).filter(
+      product => !!product.data.quantity
+    );
   }
 }
 

@@ -1,0 +1,126 @@
+.cart {
+  background-image: url("../../assets/images/smallheader.png");
+  background-repeat: no-repeat;
+  height: 100%;
+  display: flex;
+  flex-flow: column;
+  text-align: center;
+  background-size: contain;
+}
+
+.cart__listItem {
+  display: flex;
+  position: relative;
+  padding: 10px;
+  transition: box-shadow 0.2s ease-in-out;
+  background: #f2f2f2;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.16);
+  border-radius: 4px;
+  margin: 15px 25px;
+}
+
+.cart__listItem:hover {
+  box-shadow: 1px 1px 6px 0px #666666;
+}
+
+.cart__listItem + .cart__listItem {
+  border-top: solid 1px #ddd;
+}
+
+.cart__thumbWrapper {
+  flex: 0.2;
+  text-align: center;
+  align-self: center;
+}
+
+.cart__thumb {
+  max-width: 50px;
+  margin: 0 auto;
+  border-radius: 50px;
+  height: 50px;
+}
+
+.cart__textWrapper {
+  flex: 0.6;
+  padding-left: 10px;
+  text-align: left;
+}
+
+.cart__name {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.cart__body {
+  font-size: 14px;
+  white-space: nowrap;
+  width: 50vw;
+}
+
+.cart__body p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.cart__linkWrapper {
+  flex: 0.2;
+  color: #333;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-around;
+}
+
+.cart__quantity {
+  height: 24px;
+  text-align: center;
+}
+
+.cart__remove {
+  background-color: #e60014;
+  width: 18px;
+  text-align: center;
+  height: 18px;
+  border-radius: 18px;
+  cursor: pointer;
+  align-self: center;
+  color: white;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cart__number {
+  background: #ff9a0d;
+  border-radius: 50px;
+  padding: 7px;
+  color: white;
+}
+
+.cart__emptyState {
+  text-align: center;
+  margin-top: 30%;
+  padding: 0 40px;
+}
+
+.cart__emptyState__title {
+  font-size: 24px;
+}
+
+.cart__title {
+  text-align: center;
+  padding: 20px;
+  margin-top: 100px;
+}
+
+.cart__title__h2.cart__title__h2.cart__title__h2 {
+  font-weight: 900;
+  font-size: 32px;
+  line-height: 37px;
+}
+
+.cart__price__value {
+  font-size: 14px;
+  font-weight: 600;
+  color: #e60014;
+}

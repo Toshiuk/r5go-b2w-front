@@ -5,6 +5,7 @@ import CameraHandler from "../cameraHandler";
 import ProductDisplay from "../productDisplay";
 import ProductNotFound from "../productNotFound";
 import { HistoryDisplay } from "../history";
+import { Cart } from "../cart";
 import { Welcome } from "../welcome";
 
 const Main = () => (
@@ -15,6 +16,7 @@ const Main = () => (
       <Route exact path="/product/not-found" component={ProductNotFound} />
       <Route exact path="/product/:id" component={ProductDisplay} />
       <Route exact path="/history" component={HistoryDisplay} />
+      <Route exact path="/cart" component={Cart} />
     </Switch>
   </main>
 );

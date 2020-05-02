@@ -33,10 +33,8 @@ const HistoryDisplay = () => {
           <Typography variant="h3" className="history__header__h3">
             Grande mês dos cosméticos
           </Typography>
-          <Typography variant="p">
-            Até 20% de descontos em compras pelo GoScan
-          </Typography>
-          <Typography variant="p">Ofertas válidas até 01/06</Typography>
+          <Typography>Até 20% de descontos em compras pelo GoScan</Typography>
+          <Typography>Ofertas válidas até 01/06</Typography>
         </div>
       </div>
       <div className="history__list">
@@ -56,37 +54,32 @@ const HistoryDisplay = () => {
         ) : (
           products.map(({ data }) => {
             const { title, image, barcode, body, price } = data;
-            console.log(products);
             return (
-              <div key={barcode} className="history__listItem">
-                <div className="history__thumbWrapper">
-                  {image ? (
-                    <img
-                      src={image}
-                      className="history__thumb"
-                      alt={`${title} thumb`}
-                    />
-                  ) : (
-                    <div className="skeleton__imageThumb">
-                      Picture not found
+              <Link key={barcode} to={`/product/${barcode}`}>
+                <div className="history__listItem">
+                  <div className="history__thumbWrapper">
+                    {image ? (
+                      <img
+                        src={image}
+                        className="history__thumb"
+                        alt={`${title} thumb`}
+                      />
+                    ) : (
+                      <div className="skeleton__imageThumb">
+                        Picture not found
+                      </div>
+                    )}
+                  </div>
+                  <div className="history__textWrapper">
+                    <h2 className="history__name">{title}</h2>
+                    <div className="history__body">{reactHtmlParser(body)}</div>
+                    <div className="history__price history__body">
+                      Por:{" "}
+                      <span className="history__price__value">R${price}</span>
                     </div>
-                  )}
-                </div>
-                <div className="history__textWrapper">
-                  <h2 className="history__name">{title}</h2>
-                  <div className="history__body">{reactHtmlParser(body)}</div>
-                  <div className="history__price history__body">
-                    Por:{" "}
-                    <span className="history__price__value">R${price}</span>
                   </div>
                 </div>
-                <Link
-                  className="history__linkWrapper"
-                  to={`/product/${barcode}`}
-                >
-                  <AddShoppingCartRoundedIcon className="history__cart" />
-                </Link>
-              </div>
+              </Link>
             );
           })
         )}

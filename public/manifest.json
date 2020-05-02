@@ -1,24 +1,25 @@
 {
-	"name": "PWA Barcode Scanner",
-	"short_name": "BarScan",
-	"icons": [{
-			"src": "/icons/icon_196x196.png",
-			"sizes": "196x196",
-			"type": "image/png"
-		},
-		{
-			"src": "/icons/icon_296x296.png",
-			"sizes": "256x256",
-			"type": "image/png"
+  "name": "Go Scan",
+  "short_name": "GoScan",
+  "icons": [
+    {
+      "src": "/icons/icon_196x196.png",
+      "sizes": "196x196",
+      "type": "image/png"
     },
     {
-			"src": "/icons/icon_512x512.png",
-			"sizes": "512x512",
-			"type": "image/png"
-		}
-	],
-	"theme_color": "#333333",
-	"background_color": "#333333",
-	"start_url": "/",
-	"display": "standalone"
+      "src": "/icons/icon_296x296.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/icon_512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#ee0202",
+  "background_color": "#FF9800",
+  "start_url": "/",
+  "display": "standalone"
 }
