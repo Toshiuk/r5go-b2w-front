@@ -85,7 +85,7 @@ span.history__profile__icon {
 }
 
 .history__thumb {
-  max-width: 50px;
+  width: 50px;
   margin: 0 auto;
   border-radius: 50px;
   height: 50px;
@@ -104,6 +104,13 @@ span.history__profile__icon {
 
 .history__body {
   font-size: 14px;
+  white-space: nowrap;
+  width: 50vw;
+}
+
+.history__body p {
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .history__cart {
