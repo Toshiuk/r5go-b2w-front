@@ -44,17 +44,17 @@ const Cart = () => {
   const zeroPad = (num, places) => String(num).padStart(places, "0");
   return (
     <div className="cart">
+      <div className="cart__title">
+        <Typography className="cart__title__h2" variant="h2">
+          {" "}
+          Carrinho de compras{" "}
+        </Typography>
+        <Typography className="cart__title__h3" variant="h3">
+          {" "}
+          Confirme sua compra{" "}
+        </Typography>
+      </div>
       <div className="cart__list">
-        <div className="cart__title">
-          <Typography className="cart__title__h2" variant="h2">
-            {" "}
-            Carrinho de compras{" "}
-          </Typography>
-          <Typography className="cart__title__h3" variant="h3">
-            {" "}
-            Confirme sua compra{" "}
-          </Typography>
-        </div>
         {products === null || products.length === 0 ? (
           <div className="cart__emptyState">
             <h2 className="cart__emptyState__title">

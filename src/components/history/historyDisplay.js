@@ -45,10 +45,7 @@ const HistoryDisplay = () => {
         {products === null ? (
           <div className="history__emptyState">
             <h2 className="history__emptyState__title">
-              Scan some products to see them here!{" "}
-              <span role="img" aria-label="egg">
-                🥚
-              </span>
+              Faça scan de produtos para aparecerem aqui.
             </h2>
           </div>
         ) : (

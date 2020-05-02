@@ -48,6 +48,10 @@ span.history__profile__name {
   place-content: center;
 }
 
+.history__list {
+  margin-bottom: 90px;
+}
+
 span.history__profile__icon {
   background: #ee0202;
   color: white;
