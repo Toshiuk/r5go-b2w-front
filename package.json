@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "webpack-dev-server --mode development --display-error-details ",
+    "watch": "webpack-dev-server --mode development --display-error-details --port 3000 --hot --host 0.0.0.0",
     "start": "rm -rf ./dist/* && webpack --mode production && node server.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "./node_modules/.bin/eslint . --fix"
