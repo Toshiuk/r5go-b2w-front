@@ -62,7 +62,7 @@ const Cart = () => {
         {products === null || products.length === 0 ? (
           <div className="cart__emptyState">
             <h2 className="cart__emptyState__title">
-              Carrinho vazio! Go scan!
+              Falta algo por aqui, né?{" "}
               <span role="img" aria-label="cart">
                 🛒
               </span>

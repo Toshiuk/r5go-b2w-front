@@ -52,6 +52,11 @@
   flex: 0.5;
 }
 
+.productDisplay__thumbContainer img {
+  max-height: 300px;
+  width: auto;
+}
+
 .productDisplay__barcode {
   font-size: 12px;
   margin: 20px 0;
@@ -99,7 +104,7 @@
 .cart__body {
   font-size: 14px;
   white-space: nowrap;
-  width: 50vw;
+  width: 45vw;
 }
 
 .cart__body p {
