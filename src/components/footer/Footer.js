@@ -22,7 +22,7 @@ const Footer = () => (
       <HorizontalSplitIcon className="rotate" />
       Scan
     </Link>
-    <Link className="footer__link" to="/history">
+    <Link className="footer__link" to="/chat">
       <ChatRoundedIcon />
       Chat
     </Link>

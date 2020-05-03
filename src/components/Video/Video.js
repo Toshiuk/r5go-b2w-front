@@ -75,7 +75,7 @@ const Video = () => {
       <div className="video__overlay" />
       <div className="video__explanation">
         <p>
-          Scaneie o codigo de barras e compre agora!!{" "}
+          Escaneie o codigo de barras e compre agora!!{" "}
           <span role="img" aria-label="shopping cart">
             🛒
           </span>
