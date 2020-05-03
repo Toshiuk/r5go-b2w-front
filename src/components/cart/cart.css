@@ -123,6 +123,24 @@
   line-height: 37px;
 }
 
+.cart__confirm__text.cart_confirm_subtitle {
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.cart_confirm_title.cart_confirm_title.cart_confirm_title {
+  padding: 30px;
+}
+
+.cart__confirm__barcode {
+  margin: 10px auto;
+}
+
+.cart_confirm_title.cart_confirm_title.cart_confirm_title h2 {
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 16px;
+}
 .cart__value {
   font-size: 14px;
   font-weight: 600;

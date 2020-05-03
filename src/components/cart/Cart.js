@@ -13,8 +13,9 @@ import {
   DialogContentText
 } from "@material-ui/core";
 import HistoryHandler from "../history/historyHandler";
-
+import barcode from "../../assets/images/barcode.png";
 import "./cart.css";
+import LocationHandler from "../locationHandler";
 
 const Cart = () => {
   // eslint-disable-next-line no-unused-vars
@@ -42,8 +43,6 @@ const Cart = () => {
       .toFixed(2)
       .toString()
       .replace(".", ",");
-
-  console.log(products);
 
   const zeroPad = (num, places) => String(num).padStart(places, "0");
   return (
@@ -140,20 +139,68 @@ const Cart = () => {
       >
         CONFIRMAR A COMPRA
       </Button>
-
       <Dialog open={open} className="cart__confirm">
-        <DialogTitle>Sua compra foi confirmada com sucesso!</DialogTitle>
-        <DialogContent>
-          <DialogContentText>
-            <Typography className="cart__confirm__text">
-              {" "}
-              Entrega estimada: <span className="cart__value"> 00:45 min</span>
-            </Typography>
-            <Link className="cart__link" to="/history">
-              <Typography className="cart__goHome">Voltar ao inicio</Typography>
-            </Link>
-          </DialogContentText>
-        </DialogContent>
+        {LocationHandler.isLocationStore() ? (
+          <>
+            <DialogTitle className="cart_confirm_title">
+              CUPOM DIGITAL
+            </DialogTitle>
+            <DialogContent>
+              <DialogContentText>
+                <Typography className="cart__confirm__text cart_confirm_subtitle">
+                  Compra Autenticada
+                </Typography>
+                <Typography className="cart__confirm__text">
+                  {" "}
+                  Horário da compra:{" "}
+                  <span className="cart__value"> 12:47 PM</span>
+                </Typography>
+                <Typography className="cart__confirm__text">
+                  {" "}
+                  Data: <span className="cart__value"> 20/07/2020</span>
+                </Typography>
+                <Typography className="cart__confirm__text">
+                  {" "}
+                  Cód. Referencial: A7X-BV10207700123
+                </Typography>
+                <img
+                  className="cart__confirm__barcode"
+                  height="142"
+                  src={barcode}
+                  alt="barcode"
+                />
+                <Typography className="cart__confirm__text">
+                  {" "}
+                  Total da compra: <br />
+                  <span className="cart__value"> R$ {totalValue()}</span>
+                </Typography>
+                <Link className="cart__link" to="/history">
+                  <Typography className="cart__goHome">
+                    Voltar ao inicio
+                  </Typography>
+                </Link>
+              </DialogContentText>
+            </DialogContent>
+          </>
+        ) : (
+          <>
+            <DialogTitle>Sua compra foi confirmada com sucesso!</DialogTitle>
+            <DialogContent>
+              <DialogContentText>
+                <Typography className="cart__confirm__text">
+                  {" "}
+                  Entrega estimada:{" "}
+                  <span className="cart__value"> 00:45 min</span>
+                </Typography>
+                <Link className="cart__link" to="/history">
+                  <Typography className="cart__goHome">
+                    Voltar ao inicio
+                  </Typography>
+                </Link>
+              </DialogContentText>
+            </DialogContent>
+          </>
+        )}
       </Dialog>
     </div>
   );
