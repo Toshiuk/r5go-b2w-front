@@ -1,7 +1,7 @@
 {
-  "name": "pwa-barcode-scanner",
+  "name": "Go Scan",
   "version": "1.0.0",
-  "description": "Barcode scanner with product information",
+  "description": "Buy your products in americanas scanning",
   "main": "index.js",
   "scripts": {
     "dev": "webpack-dev-server --mode development --display-error-details ",
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/moigonzalez/pwa-barcode-scanner.git"
+    "url": "https://github.com/Toshiuk/r5go-b2w-front.git"
   },
   "engines": {
     "node": ">=13.5.0"
@@ -22,7 +22,7 @@
     "pwa",
     "camera"
   ],
-  "author": "Moises Gonzalez <moigonzit@gmail.com>",
+  "author": "Flavio Toshiuk  <nara.toshiraka@gmail.com>",
   "license": "MIT",
   "dependencies": {
     "@material-ui/core": "^4.9.12",
