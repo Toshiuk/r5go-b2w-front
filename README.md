@@ -13,7 +13,7 @@
     Buy your products in <a href="https://www.americanas.com.br/">Americanas</a> just scanning then.
     <br />
     <br />
-    <a href="https://github.com/Toshiuk/r5go-b2w-front">View Demo</a>
+    <a href="https://rocket-five-go-scan.herokuapp.com/">View Demo</a>
   </p>
 </p>
 
@@ -47,6 +47,8 @@ This project was made as a solution of Mega Hack 2.0 Americanas/B2W.
 
 ### Prerequisites
 
+- node
+- npm
 - yarn
 
 ### Running

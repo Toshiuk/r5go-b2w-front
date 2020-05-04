@@ -16,16 +16,22 @@ const CameraHandler = () => {
     dataHandler.isCameraPermissionGranted()
   );
 
-  useEffect(() => {
-    if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
-      setCameraSupported(true);
-    }
-  }, []);
-
   const onCamEnabled = () => {
     dataHandler.cameraPermissionGranted();
     setCameraEnabled(true);
   };
+
+  const onCamDisabled = () => {
+    dataHandler.cameraPermissionNotGranted();
+    setCameraEnabled(false);
+  };
+
+  useEffect(() => {
+    if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+      setCameraSupported(true);
+      navigator.getUserMedia({ video: true }, onCamEnabled, onCamDisabled);
+    }
+  }, []);
 
   return (
     <>
