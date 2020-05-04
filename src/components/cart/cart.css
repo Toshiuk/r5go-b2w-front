@@ -23,7 +23,7 @@
   box-shadow: 1px 1px 6px 0px #666666;
 }
 
-.cart__listItem + .cart__listItem {
+.cart__listItem+.cart__listItem {
   border-top: solid 1px #ddd;
 }
 
@@ -141,11 +141,13 @@
   font-size: 28px;
   line-height: 16px;
 }
+
 .cart__value {
   font-size: 14px;
   font-weight: 600;
   color: #e60014;
 }
+
 .cart__confirm__text.cart__confirm__text.cart__confirm__text {
   color: #000;
 }
@@ -175,8 +177,7 @@
   color: #ffffff;
   font-weight: 500;
   font-size: 14px;
-  margin: 27px;
-  margin-bottom: 90px;
+  margin: 15px 20px 0;
 }
 
 .cart__confirm {

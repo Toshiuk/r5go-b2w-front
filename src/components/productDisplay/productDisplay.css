@@ -1,6 +1,5 @@
 .productDisplay__container {
   padding: 15px;
-  height: 100%;
   display: flex;
   flex-flow: column;
   justify-content: center;
@@ -17,8 +16,7 @@
   color: #ffffff;
   font-weight: 500;
   font-size: 14px;
-  margin-top: 27px;
-  margin-bottom: 90px;
+  margin-top: 20px;
 }
 
 .button__container {
@@ -40,7 +38,7 @@
   display: flex;
   flex-direction: column;
   text-align: center;
-  margin-top: 70px;
+  margin-top: 15%;
 }
 
 .productDisplay__textContainer {
@@ -50,10 +48,12 @@
 
 .productDisplay__thumbContainer {
   flex: 0.5;
+  height: 170px;
 }
 
 .productDisplay__thumbContainer img {
-  max-height: 300px;
+  height: 170px;
+  object-fit: contain;
   width: auto;
 }
 
@@ -96,9 +96,12 @@
 }
 
 .productDisplay__description {
-  font-size: 12px;
+  font-size: 13px;
   line-height: 16px;
   text-align: center;
+  height: 60px;
+  margin-bottom: 0;
+  overflow-y: auto;
 }
 
 .cart__body {
