@@ -1,11 +1,11 @@
 .cart {
   background-image: url("../../assets/images/smallheader.png");
   background-repeat: no-repeat;
-  height: 100%;
   display: flex;
   flex-flow: column;
   text-align: center;
   background-size: contain;
+  padding-bottom: 100px;
 }
 
 .cart__listItem {
@@ -23,7 +23,7 @@
   box-shadow: 1px 1px 6px 0px #666666;
 }
 
-.cart__listItem+.cart__listItem {
+.cart__listItem + .cart__listItem {
   border-top: solid 1px #ddd;
 }
 

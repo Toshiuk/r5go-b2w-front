@@ -21,15 +21,9 @@ const CameraHandler = () => {
     setCameraEnabled(true);
   };
 
-  const onCamDisabled = () => {
-    dataHandler.cameraPermissionNotGranted();
-    setCameraEnabled(false);
-  };
-
   useEffect(() => {
     if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
       setCameraSupported(true);
-      navigator.getUserMedia({ video: true }, onCamEnabled, onCamDisabled);
     }
   }, []);
 
@@ -67,7 +61,7 @@ const CameraHandler = () => {
         <div className="cameraHandler__unsopported">
           <div>
             <p>
-              Seu dispositivo nao tem acesso a camera ou algo deu errado{" "}
+              Seu dispositivo não tem acesso a camera ou algo deu errado{" "}
               <span role="img" aria-label="thinking-face">
                 🤔
               </span>

@@ -59,6 +59,7 @@ const Video = () => {
         },
         err => {
           if (err) {
+            console.log(err);
             setVideoError(true);
             return;
           }
@@ -72,7 +73,7 @@ const Video = () => {
 
   return (
     <div className="video__page">
-      <div className="video__overlay" />
+      {!videoError && <div className="video__overlay" />}
       <div className="video__explanation">
         <p>
           Escaneie o codigo de barras e compre agora!!{" "}
